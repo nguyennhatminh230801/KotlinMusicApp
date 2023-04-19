@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/imgSong"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_baseline_music_note_24" />
+
+    <TextView
+        android:id="@+id/tvTitleSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/imgSong"
+        android:maxWidth="250dp"
+        android:text="Testing Title"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitleSong"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/imgSong"
+        android:maxWidth="250dp"
+        android:text="Author" />
+
+    <ImageButton
+        android:id="@+id/btnNextSong"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_skip_next_64" />
+
+    <ImageButton
+        android:id="@+id/btnPlayPauseSong"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_pause_circle_outline_64"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/btnNextSong"/>
+
+    <ImageButton
+        android:id="@+id/btnPreviousSong"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_skip_previous_64"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/btnPlayPauseSong"/>
+
+</RelativeLayout>

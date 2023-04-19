@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MusicActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_5percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_70percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_75percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_80percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_10percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_90percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:id="@+id/tvTitleSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_vertical_5percent"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:text="Title"/>
+
+    <ImageView
+        android:id="@+id/imgSong"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_baseline_music_note_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35"/>
+
+    <TextView
+        android:id="@+id/tvCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_vertical_75percent"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_horizontal_10percent"
+        android:text="0:00"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tvTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_vertical_75percent"
+        app:layout_constraintRight_toRightOf="@id/guideline_horizontal_90percent"
+        android:text="9:00"
+        android:textSize="18sp"/>
+
+    <SeekBar
+        android:id="@+id/sbProgressTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_horizontal_90percent"
+        app:layout_constraintStart_toStartOf="@id/guideline_horizontal_10percent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_vertical_70percent" />
+
+    <ImageButton
+        android:id="@+id/btnPreviousSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_baseline_skip_previous_64"
+        app:layout_constraintTop_toBottomOf="@id/guideline_vertical_80percent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_horizontal_10percent"/>
+
+    <ImageButton
+        android:id="@+id/btnNextSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_baseline_skip_next_64"
+        app:layout_constraintTop_toBottomOf="@id/guideline_vertical_80percent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_horizontal_90percent"/>
+
+    <ImageButton
+        android:id="@+id/btnPlayPauseSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_baseline_pause_circle_outline_64"
+        app:layout_constraintEnd_toStartOf="@+id/btnNextSong"
+        app:layout_constraintStart_toEndOf="@+id/btnPreviousSong"
+        app:layout_constraintTop_toBottomOf="@id/guideline_vertical_80percent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
